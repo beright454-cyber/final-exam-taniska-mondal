@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Annual Exam - English Version</title>
+    <style>
+        /* Force Bold Arial for maximum clarity */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+            --paper-color: rgba(255, 255, 255, 0.95);
+            --accent-pink: #f72585;
+            --text-main: #3d0311;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            font-family: 'Arial', sans-serif;
+            font-weight: bold; /* Bold text for everything */
+            margin: 0;
+            padding: 10px;
+            color: var(--text-main);
+        }
+
+        .exam-container {
+            max-width: 950px;
+            margin: 20px auto;
+            background: var(--paper-color);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border: 6px solid #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            background: #f72585;
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(247, 37, 133, 0.4);
+        }
+
+        .student-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            background: #ffe3e8;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .q-box {
+            background: white;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 10px solid #f72585;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .q-title {
+            font-size: 20px;
+            color: #f72585;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .q-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        input[type="text"], textarea {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            border: none;
+            border-bottom: 2px solid #ff85a1;
+            background: #fffafa;
+            padding: 8px;
+            color: #b71c1c;
+            outline: none;
+        }
+
+        textarea { width: 100%; height: 60px; border: 1px solid #ff85a1; border-radius: 8px; }
+
+        .btn-area {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .submit-btn { background: #4361ee; }
+        .print-btn { background: #27ae60; }
+
+        @media print {
+            .btn-area, input::placeholder { display: none !important; }
+            body { background: white; padding: 0; }
+            .exam-container { border: none; box-shadow: none; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="exam-container">
+    <div class="header">
+        <h1>🌸 FINAL ANNUAL EXAMINATION 🌸</h1>
+        <p>GRADE: 1 | SUBJECT: ENGLISH | TOTAL QUESTIONS: 20</p>
+    </div>
+
+    <div class="student-info">
+        <div>NAME: <input type="text" style="width: 80%;"></div>
+        <div>ROLL NO: <input type="text" style="width: 50%;"></div>
+        <div>DATE: <input type="text" value="MARCH 26, 2026" style="width: 50%;"></div>
+    </div>
+
+    <form id="englishExam">
+        <div class="q-box">
+            <div class="q-title">1. WRITE ALL CAPITAL LETTERS (A - Z): ✏️</div>
+            <textarea placeholder="Write here..."></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">2. WRITE ALL SMALL LETTERS (a - z): ✏️</div>
+            <textarea placeholder="Write here..."></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">3. MAKE 3 WORDS STARTING WITH 'B': 🍎</div>
+            <div class="q-content">
+                1. <input type="text"> 2. <input type="text"> 3. <input type="text">
+            </div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">4. MAKE 3 WORDS STARTING WITH 'S': 🦅</div>
+            <div class="q-content">
+                1. <input type="text"> 2. <input type="text"> 3. <input type="text">
+            </div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">5. WRITE 5 WORDS WITH THREE LETTERS (e.g., CAT): 🐱</div>
+            <textarea placeholder="List 5 words..."></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">6. WRITE NUMBER NAMES 1 TO 10 (IN WORDS): 🔢</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">7. WRITE NUMBER NAMES 11 TO 20 (IN WORDS): 🔢</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">8. NAME 5 DIFFERENT FRUITS: 🥭</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">9. NAME 5 DIFFERENT FLOWERS: 🌻</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">10. NAME 5 WILD ANIMALS: 🐯</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">11. WRITE THE OPPOSITE WORDS: ↔️</div>
+            <div class="q-content">
+                DAY x <input type="text"> | BIG x <input type="text"> | HAPPY x <input type="text">
+            </div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">12. WRITE THE RHYMING WORDS: 🤝</div>
+            <div class="q-content">
+                CAT - <input type="text"> | SUN - <input type="text"> | PEN - <input type="text">
+            </div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">13. REARRANGE LETTERS TO MAKE A WORD: (P, E, N, L, I, C) 🧩</div>
+            <div class="q-content">ANSWER: <input type="text" style="width: 100%;"></div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">14. REARRANGE LETTERS TO MAKE A WORD: (G, A, R, D, E, N) 🌳</div>
+            <div class="q-content">ANSWER: <input type="text" style="width: 100%;"></div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">15. MATCH THE FOLLOWING: 🔗</div>
+            <div class="q-content">
+                BIRD — <input type="text" placeholder="Where it flies?"> | FISH — <input type="text" placeholder="Where it swims?">
+            </div>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">16. MAKE A SENTENCE WITH: (SCHOOL) 🏫</div>
+            <input type="text" style="width: 100%;">
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">17. MAKE A SENTENCE WITH: (FRIEND) 👫</div>
+            <input type="text" style="width: 100%;">
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">18. IDENTIFY THESE EMOJIS (WRITE NAMES): (🍎, 📖, ☁️, 🥥)</div>
+            <textarea placeholder="Write names in order..."></textarea>
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">19. FILL IN THE MISSING VOWELS: (A, E, I, O, U) ✏️</div>
+            <div class="q-content">
+                B _ L L | H _ S E | K _ T E
+            </div>
+            <input type="text" placeholder="Answers here..." style="width: 100%;">
+        </div>
+
+        <div class="q-box">
+            <div class="q-title">20. WRITE 5 NAMES OF TREES YOU SEE AROUND: 🌲</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="btn-area">
+            <button type="button" class="btn submit-btn" onclick="alert('Submission Successful! Please download your paper.')">✅ SUBMIT EXAM</button>
+            <button type="button" class="btn print-btn" onclick="window.print()">📥 DOWNLOAD PDF</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
